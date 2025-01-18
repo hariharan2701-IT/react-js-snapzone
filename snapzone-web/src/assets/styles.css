@@ -79,29 +79,49 @@ body {
 
 .frames {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
 .frame {
     background-color: #e7d3ca;
-    border: 2px solid #695649;
+    border: 2px solid #000; /* Black outer border */
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
+    height: auto; /* Flexible height */
+    display: flex;
+    flex-direction: column; /* Stack elements */
+    justify-content: flex-start; /* Align elements from the top */
+    align-items: center; /* Center-align content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
 .frame img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 180px; /* Restrict image height */
+    object-fit: cover; /* Make sure the image fits well */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px;
+}
+
+.frame h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #5e474d;
+}
+
+.frame p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #4f4a4a;
 }
 
 .frame:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Slightly more shadow on hover */
 }
 
 .order-now-btn {
@@ -116,10 +136,12 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Button shadow */
 }
 
 .order-now-btn:hover {
     background-color: #2aee72;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
 }
 
 /* Footer Styles */
