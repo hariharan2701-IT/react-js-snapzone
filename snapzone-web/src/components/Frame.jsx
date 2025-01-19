@@ -6,10 +6,14 @@ const Frame = ({ frame }) => (
     <h3>{frame.size}</h3>
     <p>Colors: {frame.colors.join(" | ")}</p>
     <p>Price: ₹{frame.price}</p>
-    <button className="order-now-btn">
-      <i className="bi bi-cart"></i> Add To Cart 🖼️
-    </button>
-    
+    <div className="button-container">
+      <button className="order-now-btn">
+        <i className="bi bi-cart"></i> Buy Now 🖼️
+      </button>
+      <button className="order-now-btn">
+        <i className="bi bi-cart"></i> Add To Cart 🖼️
+      </button>
+    </div>
   </div>
 );
 

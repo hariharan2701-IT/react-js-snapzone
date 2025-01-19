@@ -144,6 +144,16 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
 }
 
+/* Add this to your CSS */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Add space between the buttons */
+    align-items: center; /* Center buttons horizontally */
+    margin-top: 15px; /* Optional: Add spacing above */
+}
+
+
 /* Footer Styles */
 .footer {
     text-align: center;
