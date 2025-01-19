@@ -7,8 +7,14 @@ const Footer = () => (
       <a href="https://wa.me/7708554879" target="_blank" rel="noopener noreferrer">
         <i className="bi bi-whatsapp"></i> 
       </a>
-        (Call / WhatsApp Contact Us: +91 7708554879, +91 9843692989)
-    </div>
+        (Call / WhatsApp Contact)
+            </div>
+            <div>
+              <h4>+91 77085 54879 , +91 98436 92989</h4>
+            </div>
+            <div>
+              <h4>Location : Velandipalayam and Saibaba colony, Coimbatore</h4>
+            </div>
   </footer>
 );
 
