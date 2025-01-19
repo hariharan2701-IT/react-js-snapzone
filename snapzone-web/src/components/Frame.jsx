@@ -8,10 +8,10 @@ const Frame = ({ frame }) => (
     <p>Price: ₹{frame.price}</p>
     <div className="button-container">
       <button className="order-now-btn">
-        <i className="bi bi-cart"></i> Buy Now 🖼️
+        <i className="bi bi-cart"></i> Buy Now
       </button>
       <button className="order-now-btn">
-        <i className="bi bi-cart"></i> Add To Cart 🖼️
+        <i className="bi bi-cart"></i> Add To Cart 
       </button>
     </div>
   </div>
