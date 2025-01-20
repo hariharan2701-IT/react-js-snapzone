@@ -2,11 +2,11 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Frame from "./components/Frame";
+import Customer from "./components/Customer"; // Import Customer component
 import framesData from "./frames.json";
 
 const App = () => (
   <div>
-    
     <Header />
     <div className="sale-container">
       <div className="sale-text">THANKS FOR CHOOSING SNAPZONE FRAMES! ❤️</div>
@@ -24,6 +24,7 @@ const App = () => (
       ))}
     </main>
     <Footer />
+    <Customer /> {/* Add the floating Customer Support button */}
   </div>
 );
 
