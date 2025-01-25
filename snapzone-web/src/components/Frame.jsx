@@ -7,11 +7,9 @@ const Frame = ({ frame }) => (
     <p>Colors: {frame.colors.join(" | ")}</p>
     <p>Price: ₹{frame.price}</p>
     <div className="button-container">
+      <button className="order-now-btn">Buy Now</button> {/* No icon here */}
       <button className="order-now-btn">
-        <i className="bi bi-cart"></i> Buy Now
-      </button>
-      <button className="order-now-btn">
-        <i className="bi bi-cart"></i> Add To Cart 
+        <i className="bi bi-cart"></i> Add To Cart
       </button>
     </div>
   </div>
