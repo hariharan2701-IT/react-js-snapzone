@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa"; // Import list icon
 
 const Categories = ({ onCategorySelect }) => {
-  // Add the new categories here
+  const [isOpen, setIsOpen] = useState(false); // State to toggle categories
+
   const categories = [
     "Frames",
     "Magic Mirror Frame",
@@ -12,19 +14,33 @@ const Categories = ({ onCategorySelect }) => {
   ];
 
   return (
-    <div className="categories-container">
-      <h2 className="text-2xl font-semibold mb-4">Choose a Category</h2>
-      <div className="categories grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className="category-btn p-2 border rounded bg-gray-200 hover:bg-gray-300"
-            onClick={() => onCategorySelect(category)} // Handle category click
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+    <div className="relative">
+      {/* List Icon Button */}
+      <button
+        className="category-list-icon p-2 rounded bg-gray-200 hover:bg-gray-300 flex items-center gap-2"
+        onClick={() => setIsOpen(!isOpen)} // Toggle list visibility
+      >
+        <FaBars className="text-xl" />
+        <span className="hidden sm:inline">Categories</span>
+      </button>
+
+      {/* Dropdown Category List */}
+      {isOpen && (
+        <div className="categories-dropdown absolute top-12 left-0 bg-white shadow-lg p-4 rounded-md">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              className="category-btn block w-full p-2 mb-2 border rounded bg-gray-200 hover:bg-gray-300 text-left"
+              onClick={() => {
+                onCategorySelect(category);
+                setIsOpen(false); // Close the dropdown after selecting
+              }}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
