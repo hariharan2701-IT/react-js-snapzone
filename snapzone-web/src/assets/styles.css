@@ -325,21 +325,54 @@ body {
 
 /* Basic styles (index.css) */
 
+/* Category Section Styles */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap for better spacing */
+    margin-top: 20px;
+}
+
 .category-btn {
     display: inline-block;
-    background-color: #e2e8f0;
-    color: #1f2937;
-    border: 1px solid #cbd5e0;
-    padding: 10px 20px;
-    border-radius: 4px;
+    background-color: #ffffff; /* White background */
+    color: #5e474d; /* Darker text color */
+    border: none; /* Removed border */
+    padding: 12px 25px; /* Adjusted padding */
+    border-radius: 8px; /* More rounded corners */
     cursor: pointer;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600; /* Slightly bolder font-weight */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease; /* smoother transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Initial shadow */
+    font-size: 16px; /* Increased font size slightly */
+    letter-spacing: 0.5px; /* subtle letter spacing */
+    background-image: linear-gradient(to bottom, #ffffff, #f8f8f8); /* Added a subtle gradient for depth */
 }
 
 .category-btn:hover {
-    background-color: #cbd5e0;
+    transform: translateY(-3px); /* Lift up slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+    background-color: #5e474d; /* Darker background on hover */
+    color: #ffffff; /* White text on hover */
+    background-image: none; /* Remove gradient on hover for solid color effect */
 }
+
+.category-btn:active { /* Style for when the button is clicked */
+    transform: translateY(0); /* No lift when clicked */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
+}
+
+/* Media Query Adjustments (if needed) */
+@media screen and (max-width: 768px) {
+    .category-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
 
 .frame {
     display: flex;

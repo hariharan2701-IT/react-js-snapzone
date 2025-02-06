@@ -7,16 +7,18 @@ import Categories from "./components/Categories"; // Import Categories component
 import framesData from "./frames.json";
 
 const App = () => {
-  const [selectedCategory, setSelectedCategory] = useState(""); // State to track selected category
+  const [selectedCategory, setSelectedCategory] = useState("Frames"); // Default to "Frames"
   const [selectedFrame, setSelectedFrame] = useState(null); // State for selected frame
 
   const handleCategorySelect = (category) => {
+    console.log("category clicked --> ", category);
     setSelectedCategory(category);
     setSelectedFrame(null); // Reset selected frame when changing category
   };
 
   const handleFrameClick = (frame) => {
     setSelectedFrame(frame); // Set the selected frame
+    console.log(frame);
   };
 
   return (
@@ -31,49 +33,37 @@ const App = () => {
         <Categories onCategorySelect={handleCategorySelect} />
 
         <main>
-          {/* Show Frames when "Frames" category is selected */}
+          {/* Frames Section */}
           {selectedCategory === "Frames" && (
             <section className="frame-section p-4">
               <h2 className="text-2xl font-semibold mb-4">All Frame Sizes</h2>
-              
-              {/* Display Small Frames */}
+
+              {/* Small Frames */}
               <div className="frames-section">
                 <h3 className="text-xl font-semibold mb-4">Small Frames</h3>
                 <div className="frames grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {framesData.small?.map((frame, index) => (
-                    <Frame
-                      key={index}
-                      frame={frame}
-                      onClick={() => handleFrameClick(frame)} // Attach click handler
-                    />
+                    <Frame key={index} frame={frame} onClick={() => handleFrameClick(frame)} />
                   ))}
                 </div>
               </div>
 
-              {/* Display Medium Frames */}
+              {/* Medium Frames */}
               <div className="frames-section mt-8">
                 <h3 className="text-xl font-semibold mb-4">Medium Frames</h3>
                 <div className="frames grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {framesData.medium?.map((frame, index) => (
-                    <Frame
-                      key={index}
-                      frame={frame}
-                      onClick={() => handleFrameClick(frame)} // Attach click handler
-                    />
+                    <Frame key={index} frame={frame} onClick={() => handleFrameClick(frame)} />
                   ))}
                 </div>
               </div>
 
-              {/* Display Large Frames */}
+              {/* Large Frames */}
               <div className="frames-section mt-8">
                 <h3 className="text-xl font-semibold mb-4">Large Frames</h3>
                 <div className="frames grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {framesData.large?.map((frame, index) => (
-                    <Frame
-                      key={index}
-                      frame={frame}
-                      onClick={() => handleFrameClick(frame)} // Attach click handler
-                    />
+                    <Frame key={index} frame={frame} onClick={() => handleFrameClick(frame)} />
                   ))}
                 </div>
               </div>
@@ -87,8 +77,12 @@ const App = () => {
               <div className="details">
                 <p><strong>Name:</strong> {selectedFrame.size}</p>
                 <p><strong>Price:</strong> ₹{selectedFrame.price}</p>
-                <p><strong>Colors:</strong> {selectedFrame.colors.join(" | ")}</p>
-                {/* You can add more details as needed */}
+                {selectedFrame.colors && (
+                  <p><strong>Colors:</strong> {selectedFrame.colors.join(" | ")}</p>
+                )}
+                {selectedFrame.Shapes && (
+                  <p><strong>Shapes:</strong> {selectedFrame.Shapes.join(" | ")}</p>
+                )}
               </div>
             </section>
           )}
