@@ -1,0 +1,8 @@
+{
+    "small": [
+        { "size": "4 × 4 Inches", "price": 199, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/4x4.png" },
+        { "size": "4 × 6 Inches", "price": 279, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/4x6.png" },
+        { "size": "5 × 7 Inches", "price": 299, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/5x7.png" },
+        { "size": "6 × 8 Inches", "price": 349, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/6x8.png" }
+      ]
+    }
