@@ -78,14 +78,14 @@ const App = () => {
           )}
 
           
-{selectedCategory === "Flower Bouquet" && (
+{selectedCategory === "Bouquets" && (
             <section className="frame-section p-4">
-              <h2 className="text-2xl font-semibold mb-4">All Frame Sizes</h2>
+              <h2 className="text-2xl font-semibold mb-4">All Types of Bouquets</h2>
 
-              {["small", "medium", "large"].map((size) => (
+              {["Flower", "Cholocate", "Polaroid"].map((size) => (
                 flowers[size]?.length > 0 && (
                   <div key={size} className="frames-section mt-8">
-                    <h3 className="text-xl font-semibold mb-4 capitalize">{size} Frames</h3>
+                    <h3 className="text-xl font-semibold mb-4 capitalize">{size} Bouquets</h3>
                     <div className="frames grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {flowers[size].map((frame, index) => (
                         <Frame key={index} frame={frame} onClick={() => handleFrameClick(frame)} />
@@ -104,7 +104,7 @@ const App = () => {
               <h3 className="text-2xl font-semibold mb-4">Frame Details</h3>
               <div className="details">
                 <p><strong>Name:</strong> {selectedFrame.size}</p>
-                <p><strong>Price:</strong> ₹{selectedFrame.price}</p>
+                <p><strong>Price : </strong> ₹{selectedFrame.price}</p>
                 {selectedFrame.colors?.length > 0 && (
                   <p><strong>Colors:</strong> {selectedFrame.colors.join(" | ")}</p>
                 )}

@@ -4,7 +4,7 @@ const Categories = ({ onCategorySelect }) => {
   const categories = [
     "Frames",
     "Magic Mirror Frame",
-    "Flower Bouquet",
+    "Bouquets",
     "Chocolate Bouquet",
     "Rose Flower Bouquet",
     "Customized Chocolate Wrappers",
