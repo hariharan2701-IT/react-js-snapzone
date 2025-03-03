@@ -4,21 +4,5 @@
     { "size": "SMALL SIZE [5 Flowers] ", "price": 279, "colors" : ["Red Rose", "Pink Rose","Multi-color"], "image": "/images/smallsizeflower.png" },
     { "size": "MEDIUM SIZE [8 Flowers] ", "price": 399, "colors" : ["Red Rose", "Pink Rose","Multi-color"], "image": "/images/mediumflower.png" },
     { "size": "LARGE SIZE [12-15 Flowers]", "price": 899, "colors": ["Red Rose", "Pink Rose","Multi-color"], "image": "/images/Largerflower.png" }
-  ],
-  "Cholocate": [
-    { "size": "8 × 8 Inches", "price": 349, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/8x8.png" },
-    { "size": "8 × 10 Inches", "price": 399, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/8x10.png" },
-    { "size": "8 × 12 Inches(A4)", "price": 469, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/8x12.png" },
-    { "size": "10 × 12 Inches",  "price": 599, "colors": ["Elegant Black 🖤","Classic White 🤍"], "image": "/images/10x12.png" },
-    { "size": "12 × 15 Inches", "price": 699, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/12x15.png" }
-    
-  ],
-  "Polaroid": [
-    { "size": "16 × 20 Inches", "price": 749, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/16x20.png" },
-    { "size": "18 × 12 Inches(A3)", "price": 999, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/18x12.png" },
-    { "size": "18 × 24 Inches", "price": 1399, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/18x24.png" },
-    { "size": "20 × 24 Inches", "price": 1899, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/20x24.png" },
-    { "size": "20 × 30 Inches", "price": 2799, "colors": ["Sleek Black 🖤", "Classic White 🤍"], "image": "/images/20x30.jpg" }
-    
   ]
 }
